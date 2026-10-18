@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Bokhyllan</title>
+</head>
+
+
+<body>
+    
+    <header class="header" id="top">
+        
+        <a href="#" class="menu-title">
+            <img src="images/book-logo.png" alt="Boklogga">    
+            Bokhyllan
+        </a>
+
+        <button type="button" class="hamburger-menu">
+        <img src="images/hamburger4.png" alt="Öppna menyn" class="hamburger">
+        </button>
+
+        <nav class="navigation">
+            <div class="menu">
+            <a href="#books">Min boklista</a>
+            <a href="#add-book">Lägg till bok</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <h1 class="hero-title">Bokhyllan</h1>
+
+            <p class="hero-subtitle">Skapa din egen bokönskelista!</p>
+
+            <p class="hero-text">Lägg till böcker du vill läsa och samla dem i din personliga bokhylla.</p>
+
+            <p class="hero-text">Håll koll på dina bokönskningar och hitta inspiration till nästa bok på din lista!</p>
+
+            <a href="#add-book" class="button">Lägg till en bok här!</a>
+            
+        </section>
+
+<!-- Boklistan och filtrering-->
+        <section id="books">
+            <h2 class="section-title">Min boklista</h2>
+
+            <p class="section-text">Här samlar du böckerna du vill läsa eller önskar dig. Välj en genre för att hitta bland dina bokönskningar!</p>
+
+
+            <div class="genre-filter"> 
+            <label for="genre-filter">Filtrera efter genre</label>
+
+            <select name="genre-filter" id="genre-filter">
+                <option value="all">Alla genrer</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Romantacy">Romantacy</option>
+                <option value="Deckare">Deckare</option>
+                <option value="Romance">Romance</option>
+                <option value="Dark romance">Dark romance</option>
+                <option value="Skräck">Skräck</option>
+                <option value="Övrigt">Övrigt</option>
+            </select>
+            </div>
+
+
+            <div id="book-catalog">
+                <!-- Bokkorten läggs in med JavaScript-->
+            </div>
+        </section>
+
+<!--Formulär för att lägga till bok-->
+        <section id="add-book">
+                <h2 class="title-form">Vilken bok vill du lägga till i din boklista?</h2>
+
+                <p class="text-form">Har du hittat en bok som verkar intressant? Lägg till den i din boklista så att du kommer ihåg den!</p>
+
+                <form id="book-form">
+                <fieldset class="form-group">
+                    <legend class="legend-1">Lägg till en bok</legend>
+
+<!-- Bokens titel -->
+                <div class="form-field">
+                    <label for="book-title">Bokens titel</label>
+                    <input type="text" id="book-title" name="title" required>
+                </div>
+                    
+<!-- Bokens författare -->
+                <div class="form-field">
+                    <label for="book-author">Författare</label>
+                    <input type="text" id="book-author" name="author" required>
+                </div>
+
+<!-- Beskrivning av boken -->                    
+                <div class="form-field">
+                    <label for="book-description">Vad handlar boken om?</label>
+                    <textarea name="description" id="book-description" rows="4"></textarea>
+                </div>
+                    
+<!-- Webbadress till bokomslaget -->
+                <div class="form-field">
+                    <label for="book-image">Välj ett bokomslag</label>
+                    <input type="url" id="book-image" name="image" placeholder="https://exempel.se">
+                </div>
+                    
+<!-- Olika genrer till formuläret -->
+                    <fieldset class="genre-options">
+                        <legend class="legend-2">Välj genre</legend>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Fantasy">
+                            Fantasy
+                        </label>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Romantacy">
+                            Romantacy
+                        </label>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Deckare">
+                            Deckare
+                        </label>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Romance">
+                            Romance
+                        </label>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Dark romance">
+                            Dark romance
+                        </label>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Skräck">
+                            Skräck
+                        </label>
+
+                        <label class="genre-option">
+                            <input type="checkbox" name="genre" value="Övrigt">
+                            Övrigt
+                        </label>
+
+                    </fieldset>
+                    <button type="submit" class="button">Lägg till bok</button>
+
+                </fieldset>
+                </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer-title">Bokhyllan</p>
+        <p class="footer-text">En plats för dina bokönskningar</p>
+        <a href="#top">Tillbaka till toppen</a>
+        <p class="footer-credit">Ella Norlander - 2026</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,577 @@
+/*Body*/
+
+/*Bakgrund och textfärg för hela sidan*/
+body{
+    background-color: #FFF8F3;
+    margin: 0;
+    color: #392D32;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*Header*/
+
+/*Bakgrund, placering och luft i headern*/
+.header{
+    background-color: #f5dfe4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+
+/*Sidnamn, bokikon och meny*/
+.menu-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #783B50;
+    text-decoration: none;
+}
+
+
+/*Storleken på bokloggan*/
+.menu-title img{
+    width: 30px;
+    height: auto;
+}
+
+
+/*Meny*/
+
+/*Placera menylänkarna bredvid varandra med mellanrum*/
+.menu{
+    display: flex;
+    gap: 25px;
+}
+
+/*Färg, textstorlek och utseende på menylänkarna*/
+.menu a{
+    color: #783B50;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/*Visa understrykning när muspekaren är över en menylänk*/
+.menu a:hover{
+    text-decoration: underline;
+}
+
+/*Hamburger*/
+.hamburger{
+    width: 30px;
+    height: auto;
+}
+
+.hamburger-menu{
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+
+/*Hero*/
+
+/*Bakgrund och text på bakgrund*/
+.hero{
+    background-color: #f5dfe4;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Centrerar på höjden*/
+    align-items: center;  /*Centrerar sidled*/
+    text-align: center;
+}
+    
+/*Huvudrubriken*/
+.hero h1{
+    font-size: 50px;
+    color: #783B50;
+    margin: 0 0 20px;
+}
+
+.hero h1::after {
+    content: ""; /*tom text*/
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 16px auto 0;
+    background-color: #91465F;
+    border-radius: 4px;
+}
+
+/*Alla textstycken i hero*/
+.hero p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/*Knappen i hero*/
+
+/*Länken till formuläret*/
+.hero .button{
+    background-color: #91465F;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+/*Knappen med hover*/
+.hero .button:hover{
+    background-color: #713449;
+}
+
+
+/*Katalog*/
+
+/*Bakgrund och luft runt hela boksektionen*/
+#books {
+    background-color: #FFF8F3;
+    padding: 60px 20px;
+}
+/*Rubriken: Min boklista*/
+#books .section-title {
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 36px;
+    color: #783B50;
+}
+/*Texten under rubriken*/
+#books .section-text {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*Ett rosa streck under rubrik*/
+#books .section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 16px auto 0;
+    background-color: #91465F;
+    border-radius: 4px;
+}
+
+/*Filtrering*/
+
+/*Placering av etiketten och rullistan*/
+.genre-filter {
+    max-width: 360px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F5DFE4;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/*Texten: Filtrera efter genre*/
+.genre-filter label {
+    color: #783B50;
+    font-weight: bold;
+}
+
+
+/*Rullistan med genrer*/
+#genre-filter {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #392D32;
+    border: 1px solid #91465F;
+    border-radius: 10px;
+    font: inherit;
+}
+
+/*Filtreringsrutan*/
+.genre-filter {
+    border: 1px solid #DFC1CB;
+    box-shadow: 0 6px 18px rgba(120, 59, 80, 0.5);
+}
+
+/*Muspekare över filtreringsrutan*/
+#genre-filter {
+    cursor: pointer;
+}
+
+/*Markering runt filtreringslistan, i fokus*/
+#genre-filter:focus {
+    outline: 2px solid #91465F; /*outlinar rutan*/
+    outline-offset: 3px; /*lägger till mellanrum mellan linje och rutan*/
+}
+
+
+
+/*Bokkort*/
+
+/*Kortets bakgrund, kant och luft*/
+.book-card {
+    padding: 20px;
+    background-color: #F5DFE4;
+    border: 1px solid #DFC1CB;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(120, 59, 80, 0.5);
+    width: 30%;
+    box-sizing: border-box;
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Omslagets storlek*/
+.book-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/*Bokens titel*/
+.book-card h3 {
+    margin: 0 0 16px;
+    font-size: 23px;
+    color: #783B50;
+
+}
+
+/*Författare, genre och beskrivning*/
+.book-card p {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #392D32;
+}
+
+/*Design på knapparna*/
+.book-card .button-3 {
+    padding: 12px 22px;
+    background-color: #91465F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.bookcard-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+} 
+
+/*Knapparna när muspekaren är över*/
+.book-card .button-3:hover {
+    background-color: #713449;
+}
+
+/*Göm beskrivning till användare klickar på knapp*/
+.hidden {
+    display: none;
+}
+
+
+/*Placering av bokkort*/
+#book-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+
+
+/*Här lägger vi senare CSS för bokbilderna*/
+
+
+/*Rubrik och text för formuläret (ovanför)*/
+/*Formulärets rubrik*/
+#add-book .title-form {
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 32px;
+    color: #783B50;
+}
+
+/*Ett rosa streck under rubrik*/
+.title-form::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 16px auto 0;
+    background-color: #91465F;
+    border-radius: 4px;
+}
+
+/*Text utanför formuläret*/
+.text-form {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/*Formulär*/
+
+/*Rubrik i formulärets ram*/
+.legend-1 {
+    padding: 0 10px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #783B50;
+}
+
+/*Formulärets storlek*/
+#add-book {
+    padding: 60px 20px;
+}
+
+#book-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*Formulärets design*/
+.form-group {
+    min-width: 0;
+    margin: 0;
+    padding: 25px;
+    background-color: #F5DFE4;
+    border: 1px solid #DFC1CB;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(120, 59, 80, 0.5);
+}
+
+
+
+/*Placering och mellanrum för varje etikett och fält*/
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/*Texten ovanför varje fält*/
+.form-field label {
+    font-weight: bold;
+    color: #783B50;
+}
+
+/*Utseende på skrivfälten och beskrivningsrutan*/
+.form-field input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #392D32;
+    border: 1px solid #DFC1CB;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-field textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #392D32;
+    border: 1px solid #DFC1CB;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/*Markering när användaren skriver i ett fält*/
+.form-field input:focus{
+    outline: 2px solid #91465F;
+    outline-offset: 2px;
+}
+
+.form-field textarea:focus{
+    outline: 2px solid #91465F;
+    outline-offset: 2px;
+}
+
+
+
+/*Genreval med checkboxar*/
+/*Rutan för valen*/
+.genre-options {
+    min-width: 0;
+    margin: 0 0 20px;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #DFC1CB;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/*Rubriken*/
+.genre-options legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #783B50;
+}
+
+/*Checkbox och texten*/
+.genre-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: #F5DFE4;
+    border-radius: 8px;
+    color: #392D32;
+    cursor: pointer;
+}
+
+/*Checkboxens storlek*/
+.genre-option input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+/*Knappen*/
+.button{
+    display: block;
+    margin: 20px auto 0;
+    background-color: #91465F;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 25px;
+}
+
+
+/*Knappen med hover*/
+.button:hover{
+    background-color: #713449;
+}
+
+
+/*Footer*/
+.footer{
+    background-color: #F5DFE4;
+    padding: 30px 20px;
+    text-align: center;
+    color: #783B50;
+    text-align: center;
+}
+
+/*Sidnamnet: Bokhyllan*/
+.footer .footer-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
+
+/*Länken tillbaka till toppen*/
+.footer a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #783B50;
+    text-decoration: none;
+    background-color: #91465F;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 25px;
+}
+
+
+/*Knappen med hover*/
+.footer a:hover{
+    background-color: #713449;
+}
+    
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/*Namn*/
+.footer .footer-credit {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+
+
+
+
+/*På telefonken*/
+@media (max-width: 425px){
+
+/*Header: anpassa luft och placering för logga och hamburgarknapp*/
+.menu-title{
+    font-size: 20px;
+}
+
+/*Hamburgarmeny*/
+.hamburger-menu{
+    display: flex
+}
+
+/*Dölj navigationen*/
+.navigation{
+    display: none;
+}
+
+/*öppna hamburgaren*/
+.navigation.open{
+    display: block;
+    position: absolute;
+    top: 100%;/*menyn hamnar under*/
+    right: 20px;
+}
+
+.header{
+    position: relative;
+}
+
+/*Bokkorten*/
+.book-card{
+    width: 170px;
+    min-height: 500px;
+}
+
+
+/*Bokbilder och boktitlar och bokknapparna*/
+.book-card img{
+    width: 100%;
+    height: 200px;
+}
+
+.book-card h3{
+    font-size: 18px;
+}
+
+.book-card p{
+    font-size: 14px;
+}
+
+.bookcard-buttons .button-3{
+    font-size: 12px;
+}
+}
